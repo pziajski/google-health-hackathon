@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from 'axios';
-import SurveyPage from "./pages/SurveryPage/SurveyPage";
+import SurveyPageTwo from "./pages/SurveryPage2/SurveyPage2";
 
 class App extends Component {
     state = {
@@ -25,7 +25,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route path="/survey" component={SurveyPage} />
+                    <Route path="/survey/2" component={SurveyPageTwo} />
                 </Switch>
             </BrowserRouter>
         );
