@@ -1,8 +1,8 @@
 import React from 'react';
 import "./SurveyPage3.scss";
-import tagIcon from "../../assests/icons/tag.svg";
-import leftChevron from "../../assests/icons/left-chevron.svg";
-import rightChevron from "../../assests/icons/right-chevron.svg";
+import tagIcon from "../../assets/svg/tag.svg";
+import leftChevron from "../../assets/svg/left-chevron.svg";
+import rightChevron from "../../assets/svg/right-chevron.svg";
 
 export default function SurveyPage3(props) {
     return (
