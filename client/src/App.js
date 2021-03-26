@@ -35,7 +35,6 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <TopNavBar title="Google Health"/>
                 <BrowserRouter>
                 <Switch>
                     <Route path='/' exact render={(renderProps) => <OnbordingPage1 {...renderProps} />}/>

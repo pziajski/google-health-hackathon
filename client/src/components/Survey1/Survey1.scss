@@ -2,6 +2,8 @@
 @use "../../partials/mixins.scss" as *;
 
 .survey {
+    padding: 0 1rem;
+    
     &__section-title {
         @include header-3;
         padding-top: 1.3125rem;
