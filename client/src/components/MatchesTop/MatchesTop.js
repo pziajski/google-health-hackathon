@@ -41,7 +41,7 @@ export default function MatchesTop(props) {
             <ul>
                 {
                     temp.map(company => 
-                        <li key={company.name} onClick={() => props.redirectToShow(company.name)}>
+                        <li className="matches-top__list-item" key={company.name} onClick={() => props.redirectToShow(company.name)}>
                             <MatchesTopItem name={company.name} image={company.image} match={company.match} />
                         </li>
                     )

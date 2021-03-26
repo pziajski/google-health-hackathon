@@ -60,7 +60,7 @@ export default function MatchesCompare(props) {
             <ul>
                 {
                     temp.map(company =>
-                        <li key={company.name} onClick={() => props.redirectToShow(company.name)}>
+                        <li className="matches-compare__list-item" key={company.name} onClick={() => props.redirectToShow(company.name)}>
                             <MatchesCompareItem
                                 name={company.name}
                                 image={company.image}

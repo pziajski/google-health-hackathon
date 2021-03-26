@@ -12,7 +12,6 @@ export default class MatchesLearn extends Component {
         return (
             <div className="matches-learn">
                 <TopNavBar title={this.props.match.params.id} menuIcon="back" />
-                
             </div>
         )
     }
