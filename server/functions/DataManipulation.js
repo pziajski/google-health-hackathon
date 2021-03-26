@@ -1,6 +1,9 @@
 const { writeFileSync, readFileSync } = require("fs");
 
-// returns 
 const ReadFromFile = (filePath) => {
     return JSON.parse(readFileSync(filePath));
+}
+
+const WriteToFile = (filepath, obj) => {
+    writeFileSync(filepath, JSON.stringify(obj), (e) => { console.log(e) })
 }
