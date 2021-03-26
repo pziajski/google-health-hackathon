@@ -2,7 +2,6 @@ import { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import OnbordingPage1 from './pages/Onbording/OnboardingPage1';
-import TopNavBar from "./components/TopNavBar/TopNavBar";
 import MatchesPage from './pages/MatchesPage/MatchesPage';
 import SurveyPage from "./pages/SurveyPage/SurveyPage";
 import './App.scss';
