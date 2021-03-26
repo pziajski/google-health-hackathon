@@ -19,5 +19,9 @@
         width: 20px;
         margin-left: 1rem;
         margin-right: 2.25rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
