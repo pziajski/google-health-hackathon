@@ -9,14 +9,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/insurance')
-            .them(res => {
-                this.setState({ insurance: res.data });
-            });
-        axios.get('http://localhost:8080/hospitals')
-            .them(res => {
-                this.setState({ hospitalsance: res.data });
-            });
+        // axios.get('http://localhost:8080/insurance')
+        //     .them(res => {
+        //         this.setState({ insurance: res.data });
+        //     });
+        // axios.get('http://localhost:8080/hospitals')
+        //     .them(res => {
+        //         this.setState({ hospitalsance: res.data });
+        //     });
     }
 
     render() {
