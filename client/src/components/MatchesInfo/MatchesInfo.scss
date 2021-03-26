@@ -1,0 +1,73 @@
+@use '../../partials/variables' as *;
+
+.matches-info{
+    display: flex;
+    flex-direction: column;
+
+    &__upper{
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px 0 rgba($color: #000000, $alpha: 10%);
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    &__container{
+        display: flex;
+        margin: 0.6875rem;
+    }
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.75rem;
+    }
+
+    &__title{
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    &__price{
+        margin-left: 2.375rem;
+        line-height: 1.25rem;
+    }
+    &__header-text{
+        margin: 0 0.875rem;
+        margin-top: 2rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.2rem;
+    }
+
+    &__text{
+        margin: 0 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    &__image{
+        width: 100%;
+        height: 212px;
+    }
+    &__image-container{
+        display: flex;
+        background-color: #B892F2;
+        height: 215px;
+    }
+
+    &__button{
+        align-self: flex-end;
+        width: fit-content;
+        padding: 1rem;
+        color: $primary-white;
+        background-color: $primary-purple;
+        border-radius: 23px;
+        margin-right: 0.75rem;
+    }
+}
+
+.bold{
+    font-weight: 700;
+}
