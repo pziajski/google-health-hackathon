@@ -2,6 +2,10 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 .App {
     position: relative;
     display: flex;
@@ -11,6 +15,7 @@
     flex-direction: column;
     align-items: center;
     font-family: "Roboto";
+    font-size: 0.875rem;
     // padding: 0 1rem;
 }
 
