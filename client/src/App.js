@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import axios from 'axios';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NavBar from './component/nav/NavBar'
 import OnbordingPage1 from './pages/Onbording/OnboardingPage1';
 import './App.scss';
 class App extends Component {
@@ -23,13 +24,16 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <BrowserRouter>
-                <Switch>
-                    <Route exact path='/' component={OnbordingPage1}/>
-                </Switch>
-                </BrowserRouter>
-            </div>
+            <>
+                <NavBar />
+                <div className="App">
+                    <BrowserRouter>
+                        <Switch>
+                            <Route exact path='/' component={OnbordingPage1} />
+                        </Switch>
+                    </BrowserRouter>
+                </div>
+            </>
         );
     }
 }
