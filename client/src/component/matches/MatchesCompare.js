@@ -17,7 +17,7 @@ class MatchesCompare extends Component {
                     <img className="matches-compare__logo" src={image} alt='plan-icon' />
                     <div className='matches-compare__box'>
                         <h1 className='matches-compare__name'>{name}</h1>
-                        <h3 className='matches-compare__label label'>{plan} match</h3>
+                        <h3 className='matches-compare__label label'>{plan}</h3>
                     </div>
                     <img className='matches-compare__arrow' src={rightArrow} alt='right-arrow' />
                 </div>
