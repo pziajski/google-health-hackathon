@@ -16,7 +16,7 @@ class Manulife extends Component {
     }
 
     render() {
-
+        const {onClickHandler} = this.props;
         return (
             <main className='matches-info'>
                 <div className='matches-info__upper'>
@@ -34,11 +34,11 @@ class Manulife extends Component {
 
                     <p className='matches-info__price'>Premium: ${this.state.premium}</p>
                     <p className='matches-info__price'>Deductible: ${this.state.deductible}</p>
-                    <p className='matches-info__price'><span className='bold'>Copaymment: </span>${this.state.copaymment}</p>
+                    <p className='matches-info__price'><span onClick={onClickHandler} className='bold'>Copayment: </span>${this.state.copaymment}</p>
                 </div>
                 <p className='matches-info__text'> The policy requires that each covered person select a primary care physician who will be responsible for providing primary medical care and provide guidance for any care from other medical care providers.</p>
                 <h2 className='matches-info__header-text'>USE OF IN-NETWORK PROVIDERS</h2>
-                <p className='matches-info__text'>In-network providers agree to cover expenses at lower costs. A covered person must pay any <span className='bold'>copayment</span>, deductible or coinsurance they owe to the in-network provider`</p>
+                <p className='matches-info__text'>In-network providers agree to cover expenses at lower costs. A covered person must pay any <span onClick={onClickHandler} className='bold'>copayment</span>, deductible or coinsurance they owe to the in-network provider`</p>
                 <button className='matches-info__button'>+ REGISTER</button>
             </main>
         );
