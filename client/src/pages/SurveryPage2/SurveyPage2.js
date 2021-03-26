@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import "./SurveyPage2";
 
-export default class SurveyPage extends Component {
+export default class SurveyPageTwo extends Component {
     submitSurvey = (e) => {}
 
     render() {
