@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import axios from 'axios';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-
+import OnbordingPage1 from './pages/Onbording/OnboardingPage1';
+import './App.scss';
 class App extends Component {
     state = {
         insurance: null,
@@ -25,7 +26,7 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                 <Switch>
-                    <Route exact path='/' />
+                    <Route exact path='/' component={OnbordingPage1}/>
                 </Switch>
                 </BrowserRouter>
             </div>
