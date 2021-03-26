@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { ReadFromFile } = require("../functions/DataManipulation");
-const insuranceFile = require("../assets/data/insurances.json");
-const hospitalsFile = require("../assets/data/hospitals.json");
-const profilesFile = require("../assets/data/profiles.json");
+const insuranceFile = "./assets/data/insurances.json";
+const hospitalsFile = "./assets/data/hospitals.json";
+const profilesFile = "./assets/data/profiles.json";
 
 router
     .route("/")
@@ -16,7 +16,7 @@ router
     .route("/:policyId")
     .get((req, res) => {
         const policy = ReadFromFile(insuranceFile).find(policy => policy.id === req.params.policyId);
-        if (!!policy) {
+        if (!policy) {
             return res.status(404).send("Policy not found.");
         }
 
