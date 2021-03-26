@@ -21,11 +21,13 @@ export default function Survey1(props) {
                     <h2 className="survey__section-title">Are you currently insured?</h2>
                     <label className="survey__radio">
                         <p>Yes</p>
-                        <input type="radio" name="radio-insured" />
+                        <input type="radio" id="radio-is" name="radio-insured" className="survey__radio-item" />
+                        <label htmlFor="radio-is" className="radio-styling"></label>
                     </label>
                     <label className="survey__radio">
                         <p>No</p>
-                        <input type="radio" name="radio-insured" />
+                        <input type="radio" id="radio-isnt" name="radio-insured" className="survey__radio-item" />
+                        <label htmlFor="radio-isnt" className="radio-styling"></label>
                     </label>
                 </div>
                 <div>
