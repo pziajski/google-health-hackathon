@@ -16,6 +16,7 @@
 
     &__radio {
         @include body-options;
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
