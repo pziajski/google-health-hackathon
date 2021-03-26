@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import axios from 'axios';
-import SurveyPageTwo from "./pages/SurveryPage2/SurveyPage2";
+import SurveyPage2 from "./pages/SurveyPage2/SurveyPage2";
+import SurveyPage3 from "./pages/SurveyPage3/SurveyPage3";
 import OnbordingPage1 from './pages/Onbording/OnboardingPage1';
 import './App.scss';
 
@@ -28,8 +29,9 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                 <Switch>
-                    <Route exact path='/' component={OnbordingPage1}/>
-                    <Route path="/survey/2" component={SurveyPageTwo} />
+                    <Route path='/survey/1' render={(renderProps) => <OnbordingPage1 {...renderProps} />}/>
+                    <Route path="/survey/2" render={(renderProps) => <SurveyPage2 {...renderProps} />} />
+                    <Route path="/survey/3" render={(renderProps) => <SurveyPage3 {...renderProps} />} />
                 </Switch>
                 </BrowserRouter>
             </div>
