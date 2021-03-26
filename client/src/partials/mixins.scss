@@ -12,6 +12,18 @@
     font-weight: 400;
 }
 
+@mixin bottom-menu-font {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+@mixin top-sub-menu {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
 @mixin button-styling {
     display: flex;
     align-items: center;
