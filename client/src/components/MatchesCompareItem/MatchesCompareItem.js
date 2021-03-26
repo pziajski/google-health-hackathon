@@ -8,9 +8,7 @@ class MatchesCompare extends Component {
         return (
             <div className='matches-compare-item'>
                 <div className='matches-compare-item__inner'>
-                    <div className='matches-compare-item__outer' style={{width: match}}>
-
-                    </div>
+                    <div className='matches-compare-item__outer' style={{width: match}}></div>
                 </div>
                 <h3 className='matches-compare-item__match'>{match} Match</h3>
                 <div className='matches-compare-item__container'>

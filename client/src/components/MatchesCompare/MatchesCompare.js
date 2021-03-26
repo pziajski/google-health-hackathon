@@ -2,7 +2,7 @@ import React from 'react';
 import MatchesCompareItem from "../MatchesCompareItem/MatchesCompareItem";
 import "./MatchesCompare.scss";
 
-export default function MatchesCompare() {
+export default function MatchesCompare(props) {
     const temp = [
         {
             name: 'Manulife',
@@ -43,7 +43,7 @@ export default function MatchesCompare() {
             deductible: 50,
             coverage: ['ER Visits', 'Maternity', 'Checkups'],
             notCovered: 'Travel'
-        },{
+        }, {
             name: 'WellCase',
             image: '',
             match: '83%',
@@ -57,20 +57,24 @@ export default function MatchesCompare() {
 
     return (
         <div className="matches-compare">
-            {
-                temp.map(company => 
-                    <MatchesCompareItem
-                        key={company.name}
-                        name={company.name}
-                        image={company.image}
-                        match={company.match}
-                        plan={company.plan}
-                        premium={company.premium}
-                        deductible={company.deductible}
-                        coverage={company.coverage}
-                        notCovered={company.notCovered}
-                />)
-            }
+            <ul>
+                {
+                    temp.map(company =>
+                        <li key={company.name} onClick={() => props.redirectToShow(company.name)}>
+                            <MatchesCompareItem
+                                name={company.name}
+                                image={company.image}
+                                match={company.match}
+                                plan={company.plan}
+                                premium={company.premium}
+                                deductible={company.deductible}
+                                coverage={company.coverage}
+                                notCovered={company.notCovered}
+                            />
+                        </li>
+                    )
+                }
+            </ul>
         </div>
     )
 }

@@ -11,7 +11,7 @@ class MatchesTop extends Component {
         <div className="matches-top-item__container">
           <div className="matches-top-item__box">
             <h1 className='matches-top-item__name'>{name}</h1>
-            <img src={rightArrow} alt='right-arrow' />
+            <img className="matches-top-item__arrow" src={rightArrow} alt='right-arrow' />
           </div>
           <h3 className='matches-top-item__label label'>{match} match</h3>
         </div>

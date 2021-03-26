@@ -38,11 +38,15 @@ export default function MatchesTop(props) {
 
     return (
         <div className="matches-top">
-            {
-                temp.map(company => {
-                    return <MatchesTopItem key={company.id} name={company.name} image={company.image} match={company.match} />
-                })
-            }
+            <ul>
+                {
+                    temp.map(company => 
+                        <li key={company.name} onClick={() => props.redirectToShow(company.name)}>
+                            <MatchesTopItem name={company.name} image={company.image} match={company.match} />
+                        </li>
+                    )
+                }
+            </ul>
         </div>
     )
 }
