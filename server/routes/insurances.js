@@ -16,7 +16,7 @@ router
     .route("/:policyId")
     .get((req, res) => {
         const policy = ReadFromFile(insuranceFile).find(policy => policy.id === req.params.policyId);
-        if (!!policy) {
+        if (!policy) {
             return res.status(404).send("Policy not found.");
         }
 

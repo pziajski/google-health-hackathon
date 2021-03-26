@@ -16,7 +16,7 @@ router
     .route("/:hospitalId")
     .get((req, res) => {
         const hospital = ReadFromFile(hospitalsFile).find(hospital => hospital.id === req.params.hospitalId);
-        if (!!hospital) {
+        if (!hospital) {
             return res.status(404).send("Hospital not found.");
         }
 
