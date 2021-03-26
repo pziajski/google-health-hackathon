@@ -2,6 +2,10 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 .App {
     position: relative;
     display: flex;

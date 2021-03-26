@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import axios from 'axios';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NavBar from './component/nav/NavBar'
 import SurveyPage2 from "./pages/SurveyPage2/SurveyPage2";
 import SurveyPage3 from "./pages/SurveyPage3/SurveyPage3";
 import OnbordingPage1 from './pages/Onbording/OnboardingPage1';
