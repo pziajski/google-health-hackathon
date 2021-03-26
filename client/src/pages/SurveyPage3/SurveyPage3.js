@@ -6,7 +6,7 @@ import rightChevron from "../../assests/icons/right-chevron.svg";
 
 export default function SurveyPage3(props) {
     return (
-        <div className="survey-3">
+        <main className="survey-3">
             <div>
                 <h2 className="survey__section-title">What coverage are you looking for?</h2>
                 <label className="survey__checkbox">
@@ -45,6 +45,6 @@ export default function SurveyPage3(props) {
                     </button>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

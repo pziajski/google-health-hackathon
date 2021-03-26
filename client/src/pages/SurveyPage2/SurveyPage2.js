@@ -7,7 +7,7 @@ import rightChevron from "../../assests/icons/right-chevron.svg";
 export default function SurveyPage2(props) {
     console.log(props);
     return (
-        <section className="survey">
+        <main className="survey">
             <form onSubmit={(e) => this.submitSurvey(e)}>
                 <div>
                     <h2 className="survey__section-title">Are you currently insured?</h2>
@@ -59,6 +59,6 @@ export default function SurveyPage2(props) {
                     </div>
                 </div>
             </form>
-        </section>
+        </main>
     )
 }

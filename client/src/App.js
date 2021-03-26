@@ -28,6 +28,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <NavBar/>
                 <BrowserRouter>
                 <Switch>
                     <Route path='/survey/1' render={(renderProps) => <OnbordingPage1 {...renderProps} />}/>

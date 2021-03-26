@@ -1,0 +1,26 @@
+@use '../../partials/variables' as *;
+
+.nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: $primary-purple;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,40%);
+
+    &__menu{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 1rem;
+    }
+
+    &__title {
+        color: $primary-white;
+        font-family: 'Roboto';
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 1rem;
+    }
+}
+
