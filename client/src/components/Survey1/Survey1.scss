@@ -3,7 +3,7 @@
 
 .survey {
     padding: 0 1rem;
-    
+
     &__section-title {
         @include header-3;
         padding-top: 1.3125rem;
@@ -16,6 +16,7 @@
 
     &__radio {
         @include body-options;
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -23,6 +24,16 @@
         height: 3.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    &__radio-item {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .radio-styling {
+            background: radial-gradient($primary-purple 45%, $primary-white 50%);
+        }
     }
 
     &__selections {
@@ -40,7 +51,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        background: #FFFFFF;
+        background: #ffffff;
         box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.1);
     }
 
@@ -53,12 +64,42 @@
     }
 }
 
-input[type=radio] {
+.radio-styling {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+}
+
+input[type="radio"] {
     border: 1px solid #000000;
     background-color: $primary-white;
 
     &:checked {
         border: 1px solid $primary-purple;
-        background: radial-gradient(circle at center, $primary-purple 40%, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white);
+        background: radial-gradient(
+            circle at center,
+            $primary-purple 40%,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white,
+            white
+        );
     }
 }
