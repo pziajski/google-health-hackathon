@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import "./BottomMenu.scss";
-import homeIcon from "../../assets/svg/home.svg";
-import coverageIcon from "../../assets/svg/coverage.svg";
-import learnIcon from "../../assets/svg/learn.svg";
-import profileIcon from "../../assets/svg/profile.svg";
+import { ReactComponent as HomeIcon } from "../../assets/svg/home.svg";
+import { ReactComponent as CoverageIcon } from "../../assets/svg/coverage.svg";
+import { ReactComponent as LearnIcon } from "../../assets/svg/learn.svg";
+import { ReactComponent as ProfileIcon } from "../../assets/svg/profile.svg";
 
 export default function BottomMenu() {
     return (
@@ -12,25 +12,25 @@ export default function BottomMenu() {
             <ul className="bottom-menu__list">
                 <li>
                     <NavLink className="bottom-menu__item" activeClassName="bottom-menu__item--active" to="/matches/home">
-                        <img src={homeIcon} className="bottom-menu__icon" />
+                        <HomeIcon className="bottom-menu__icon" />
                         <p>Home</p>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink className="bottom-menu__item" activeClassName="bottom-menu__item--active" to="/matches/coverage">
-                        <img src={coverageIcon} className="bottom-menu__icon" />
+                        <CoverageIcon className="bottom-menu__icon" />
                         <p>Coverage</p>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink className="bottom-menu__item" activeClassName="bottom-menu__item--active" to="/matches/learn">
-                        <img src={learnIcon} className="bottom-menu__icon" />
+                        <LearnIcon className="bottom-menu__icon" />
                         <p>Learn</p>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink className="bottom-menu__item" activeClassName="bottom-menu__item--active" to="/matches/profile">
-                        <img src={profileIcon} className="bottom-menu__icon" />
+                        <ProfileIcon className="bottom-menu__icon" />
                         <p>Profile</p>
                     </NavLink>
                 </li>

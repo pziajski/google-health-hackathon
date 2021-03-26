@@ -25,17 +25,14 @@
         padding-right: 1rem;
     }
 
-    &__checkbox {
-        @include body-options;
-        display: flex;
-        align-items: center;
-        gap: 2.25rem;
-        height: 3.5rem;
-        padding-left: 1rem;
+    &__selections {
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__action {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -53,5 +50,15 @@
 
     &__page-indicator {
         display: flex;
+    }
+}
+
+input[type=radio] {
+    border: 1px solid #000000;
+    background-color: $primary-white;
+
+    &:checked {
+        border: 1px solid $primary-purple;
+        background: radial-gradient(circle at center, $primary-purple 40%, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white, white);
     }
 }

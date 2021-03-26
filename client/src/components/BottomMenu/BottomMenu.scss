@@ -28,7 +28,9 @@
 
         &--active {
             color: $primary-purple;
-            fill: $primary-purple;
+            & path{
+                fill: $primary-purple !important;
+            }
         }
     }
 
