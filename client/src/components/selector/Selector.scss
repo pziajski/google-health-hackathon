@@ -1,0 +1,21 @@
+@use '../../partials/variables' as *;
+
+.select{
+    display: flex;
+    margin-left: 1.25rem;
+    margin: 1.25rem 0;
+    align-items: center;
+
+    &__title{
+        font-size: 1rem;
+    }
+
+    &__icon{
+        margin-left: 1rem;
+        margin-right: 2.25rem;
+
+        &--clicked path{
+            fill: $primary-purple;
+        }
+    }
+}
