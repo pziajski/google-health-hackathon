@@ -1,48 +1,52 @@
 import React from 'react';
 import MatchesTopItem from "../MatchesTopItem/MatchesTopItem";
 import "./MatchesTop.scss";
+import manulifeIcon from "../../assets/planIcon/Manulife.svg";
+import kaiserIcon from "../../assets/planIcon/Kaiser.svg";
+import humanaIcon from "../../assets/planIcon/Humana.svg";
+import cvsIcon from "../../assets/planIcon/CVS.svg";
+import wellcareIcon from "../../assets/planIcon/WellCare.svg";
 
 export default function MatchesTop(props) {
     const temp = [
         {
-            id: "1",
             name: "Manulife",
-            image: "",
+            image: manulifeIcon,
             match: "85%"
         },
         {
-            id: "2",
             name: "Kaiser Health",
-            image: "",
+            image: kaiserIcon,
             match: "83%"
         },
         {
-            id: "3",
             name: "Humana",
-            image: "",
+            image: humanaIcon,
             match: "75%"
         },
         {
-            id: "4",
             name: "CVS",
-            image: "",
+            image: cvsIcon,
             match: "72%"
         },
         {
-            id: "5",
             name: "WellCare",
-            image: "",
+            image: wellcareIcon,
             match: "70%"
         },
     ];
 
     return (
         <div className="matches-top">
-            {
-                temp.map(company => {
-                    return <MatchesTopItem key={company.id} name={company.name} image={company.image} match={company.match} />
-                })
-            }
+            <ul>
+                {
+                    temp.map(company => 
+                        <li className="matches-top__list-item" key={company.name} onClick={() => props.redirectToShow(company.name)}>
+                            <MatchesTopItem name={company.name} image={company.image} match={company.match} />
+                        </li>
+                    )
+                }
+            </ul>
         </div>
     )
 }

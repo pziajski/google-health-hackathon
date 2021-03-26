@@ -8,16 +8,14 @@ class MatchesCompare extends Component {
         return (
             <div className='matches-compare-item'>
                 <div className='matches-compare-item__inner'>
-                    <div className='matches-compare-item__outer' style={{width: match}}>
-
-                    </div>
+                    <div className='matches-compare-item__outer' style={{width: match}}></div>
                 </div>
                 <h3 className='matches-compare-item__match'>{match} Match</h3>
                 <div className='matches-compare-item__container'>
                     <img className="matches-compare-item__logo" src={image} alt='plan-icon' />
                     <div className='matches-compare-item__box'>
                         <h1 className='matches-compare-item__name'>{name}</h1>
-                        <h3 className='matches-compare-item__label label'>{plan} match</h3>
+                        <h3 className='matches-compare-item__label label'>{plan}</h3>
                     </div>
                     <img className='matches-compare-item__arrow' src={rightArrow} alt='right-arrow' />
                 </div>

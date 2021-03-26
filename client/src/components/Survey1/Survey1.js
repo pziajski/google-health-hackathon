@@ -51,7 +51,7 @@ export default function Survey1(props) {
                             <span className="circle circle__active"></span>
                             <span className="circle"></span>
                         </div>
-                        <button type="click" className="survey__button" onClick={() => props.go("/matches")}>
+                        <button type="click" className="survey__button" onClick={() => props.go("/matches/coverage")}>
                             NEXT
                             <img src={rightChevron} alt="" />
                         </button>

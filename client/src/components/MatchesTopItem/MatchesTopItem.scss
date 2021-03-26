@@ -39,4 +39,9 @@
         border-bottom: 1px solid $label;
         padding: 0.4rem 0;
     }
+
+    &__arrow {
+        height: 15px;
+        width: 12px;
+    }
 }

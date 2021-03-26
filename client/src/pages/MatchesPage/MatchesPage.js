@@ -3,7 +3,7 @@ import axios from "axios";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BottomMenu from '../../components/BottomMenu/BottomMenu';
 import MatchesCoverage from "../../components/MatchesCoverage/MatchesCoverage";
-import TopNavBar from "../../components/TopNavBar/TopNavBar";
+import MatchesLearn from "../../components/MatchesLearn/MatchesLearn";
 import "./MatchesPage.scss";
 
 
@@ -22,21 +22,20 @@ export default class MatchesPage extends Component {
     //         })
     // }
 
+    redirectToInsurance = (id) => {
+        this.props.history.push(`/matches/learn/${id}`);
+    }
+
     render() {
+        console.log("rendered")
         // if (!!this.state.insuranceList) { return <>Loading...</>}
         return (
             <div className="matches-page">
-                <>
-                    <TopNavBar title="Matches" menuIcon="back" />
-                    <BrowserRouter>
-                        <Switch>
-                            <Route to="/matches/coverage" render={renderProps =>
-                                <MatchesCoverage {...renderProps} />
-                            } />
-                        </Switch>
-                        <BottomMenu />
-                    </BrowserRouter>
-                </>
+                <Switch>
+                    <Route path="/matches/coverage" exact render={renderProps => <MatchesCoverage redirectToShow={this.redirectToInsurance} {...renderProps} />} />
+                    <Route path="/matches/learn/:id" render={renderProps => <MatchesLearn {...renderProps} />} />
+                </Switch>
+                <BottomMenu />
             </div>
         )
     }
