@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./SurveyPage2.scss";
 import tagIcon from "../../assests/icons/tag.svg";
 import leftChevron from "../../assests/icons/left-chevron.svg";
 import rightChevron from "../../assests/icons/right-chevron.svg";
 
-export default class SurveyPageTwo extends Component {
-    submitSurvey = (e) => { }
-
-    render() {
-        return (
-            <section className="survey">
-                <form onSubmit={(e) => this.submitSurvey(e)}>
+export default function SurveyPage2(props) {
+    console.log(props);
+    return (
+        <section className="survey">
+            <form onSubmit={(e) => this.submitSurvey(e)}>
+                <div>
                     <h2 className="survey__section-title">Are you currently insured?</h2>
                     <label className="survey__radio">
                         <p>Yes</p>
@@ -20,6 +19,8 @@ export default class SurveyPageTwo extends Component {
                         <p>No</p>
                         <input type="radio" name="radio-insured" />
                     </label>
+                </div>
+                <div>
                     <h2 className="survey__section-title">What coverage are you looking for?</h2>
                     <label className="survey__checkbox">
                         <input className="survey__coverage" type="checkbox" name="dental" value="Dental" />
@@ -42,18 +43,22 @@ export default class SurveyPageTwo extends Component {
                         <p>Additional Coverage (not listed above)</p>
                     </label>
                     <div className="survey__action">
-                        <button type="click" className="survey__button">
+                        <button type="click" className="survey__button" onClick={() => props.history.push("/survey/1")}>
                             <img src={leftChevron} alt="" />
                             BACK
                         </button>
-                        <div className="survey__page-indicator"></div>
-                        <button className="survey__button">
+                        <div className="survey__page-indicator">
+                            <span className="circle"></span>
+                            <span className="circle circle__active"></span>
+                            <span className="circle"></span>
+                        </div>
+                        <button type="click" className="survey__button" onClick={() => props.history.push("/survey/3")}>
                             NEXT
                             <img src={rightChevron} alt="" />
                         </button>
                     </div>
-                </form>
-            </section>
-        )
-    }
+                </div>
+            </form>
+        </section>
+    )
 }
