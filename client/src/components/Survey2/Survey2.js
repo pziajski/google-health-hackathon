@@ -24,7 +24,7 @@ export default function Survey2(props) {
     return (
         <main className="survey-2">
             <div>
-                <h2 className="survey-2__section-title">What coverage are you looking for?</h2>
+                <h2 className="survey-2__section-title">Do you have a history of any of the following?</h2>
                 <ul className="survey-2__list">
                     {
                         selections.map(selection =>
