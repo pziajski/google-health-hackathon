@@ -5,7 +5,6 @@ import OnbordingPage1 from './pages/Onbording/OnboardingPage1';
 import MatchesPage from './pages/MatchesPage/MatchesPage';
 import SurveyPage from "./pages/SurveyPage/SurveyPage";
 import './App.scss';
-import MatchesInfo from './components/MatchesInfo/MatchesInfo';
 class App extends Component {
     constructor() {
         super();
@@ -36,7 +35,7 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                 <Switch>
-                    <Route path='/' exact render={(renderProps) => <MatchesInfo {...renderProps} />}/>
+                    <Route path='/' exact render={(renderProps) => <OnbordingPage1 {...renderProps} />}/>
                     <Route path="/survey" render={renderProps => <SurveyPage {...renderProps} />}/>
                     <Route path="/matches" render={(renderProps) => <MatchesPage {...renderProps} />} />
                 </Switch>
