@@ -1,14 +1,13 @@
 import React from 'react';
-import "./SurveyPage2.scss";
 import tagIcon from "../../assets/svg/tag.svg";
 import leftChevron from "../../assets/svg/left-chevron.svg";
 import rightChevron from "../../assets/svg/right-chevron.svg";
+import "./Survey1.scss";
 
-export default function SurveyPage2(props) {
-    console.log(props);
+export default function Survey1(props) {
     return (
         <section className="survey">
-            <form onSubmit={(e) => this.submitSurvey(e)}>
+            <form>
                 <div>
                     <h2 className="survey__section-title">Are you currently insured?</h2>
                     <label className="survey__radio">
@@ -43,7 +42,7 @@ export default function SurveyPage2(props) {
                         <p>Additional Coverage (not listed above)</p>
                     </label>
                     <div className="survey__action">
-                        <button type="click" className="survey__button" onClick={() => props.history.push("/survey/1")}>
+                        <button type="click" className="survey__button" onClick={() => props.go("/")}>
                             <img src={leftChevron} alt="" />
                             BACK
                         </button>
@@ -52,7 +51,7 @@ export default function SurveyPage2(props) {
                             <span className="circle circle__active"></span>
                             <span className="circle"></span>
                         </div>
-                        <button type="click" className="survey__button" onClick={() => props.history.push("/survey/3")}>
+                        <button type="click" className="survey__button" onClick={() => props.go("/matches")}>
                             NEXT
                             <img src={rightChevron} alt="" />
                         </button>
